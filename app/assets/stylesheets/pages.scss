@@ -1464,6 +1464,10 @@
     height: 60px;
     margin: 15px 0;
     border-right: solid 1px #8c8c8c;
+    width: 90%;
+    @media (max-width: $screen-md-min) {
+      width: 50%;
+    }
   }
   .union-levels {
     height: 1px;
@@ -1478,7 +1482,7 @@
   }
   .union-levels-vertical-left {
     height: 60px;
-    margin: 15px 0;
+    margin: 15px 0 15px 10%;
     border-left: solid 1px #8c8c8c;
     @media (max-width: $screen-md-min) {
       border-left: 0;
