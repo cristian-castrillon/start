@@ -11,6 +11,8 @@ Rails.application.routes.draw do
 
   get 'handbook', to: 'pages#handbook', as: :handbook
 
+  get "levels" => "pages#levels"
+
   get  'login', to: 'sessions#new', as: :login
   post 'login', to: 'sessions#create'
   get  'auth/:provider/callback', to: 'sessions#create_with_omniauth', as: :login_omniauth
