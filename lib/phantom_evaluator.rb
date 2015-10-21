@@ -1,6 +1,8 @@
 # encoding: UTF-8
 class PhantomEvaluator < Evaluator
   def evaluate(solution)
+    fail(solution, "Lo sentimos :S, el evaluador de HTML no está disponible por el momento. Estamos trabajando para arreglarlo lo más pronto posible. Por favor inténtalo más tarde.")
+    return
     host = ENV['HOSTNAME'] || "http://localhost:3000"
     filename = 'tmp/eval-' + solution.id.to_s + '.js'
 
@@ -31,7 +33,7 @@ function evaluate(index) {
 
     page.injectJs('lib/phantom-util.js');
     var result = page.evaluate(evaluation.callback);
-    if (result) { 
+    if (result) {
       console.log(result);
       phantom.exit();
     } else {
